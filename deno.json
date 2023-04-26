@@ -1,10 +1,39 @@
 {
-  "tasks": {
-    "start": "deno run -A --watch=static/,routes/ dev.ts"
-  },
-  "importMap": "./import_map.json",
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact"
-  }
+	"$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
+	"version": "1.0.0",
+	"apiVersion": "v1",
+	"tasks": {
+		"start": "deno run -Ar --unstable main.ts",
+		"dev": "deno run -A --unstable --watch=components/,routes/,islands/,layouts/,static/ dev.ts --no-clear-screen",
+		"test": "deno test --allow-all --no-check --unstable --doc --allow-none"
+	},
+	"importMap": "import_map.json",
+	"lint": {
+		"rules": {
+			"tags": ["recommended"],
+			"include": ["ban-untagged-todo"],
+			"exclude": ["no-unused-vars"]
+		}
+	},
+	"fmt": {
+		"options": {
+			"useTabs": true,
+			"lineWidth": 100,
+			"indentWidth": 4,
+			"proseWrap": "preserve",
+			"singleQuote": true
+		},
+		"files": {
+			"exclude": ["static/", "target/"]
+		}
+	},
+	"test": {
+		"files": {
+			"exclude": ["target/", "wasm/"]
+		}
+	},
+	"compilerOptions": {
+		"jsx": "react-jsx",
+		"jsxImportSource": "preact"
+	}
 }
