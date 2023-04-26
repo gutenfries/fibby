@@ -64,7 +64,7 @@ fibby v0.1.0:
 Usage: http://localhost:8000/api/fibonacci/{count}?{options}
 
 Count:
-  <COUNT>  the length of the sequence to output, i.e.: 0, 1, 1, 2, 3, 5 would be the result of \`count=6\`.
+  <COUNT>  the length of the sequence to output, i.e.: 0, 1, 1, 2, 3, 5 would be the result of `count=6`.
     Count must be a positive, non-zero integer.
 
 Options:
