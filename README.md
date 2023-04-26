@@ -58,7 +58,7 @@ deno task dev
 output of running `http://localhost:8000/api/fibonacci/{}/?help`:
 
 ```json
-{ HELP_MESSAGE: "
+{ HELP_MESSAGE: `
 fibby v0.1.0:
 
 
@@ -72,5 +72,5 @@ Options:
   ?numbering      Preface each number in the sequence with it's position within the sequence, i.e: 1:0, 2:1, 3:1, 4:2, 5:3, 6:5
   ?last-only      Print only the last number of the sequence for the given count
   ?help           Print help
-" }
+` }
 ```
